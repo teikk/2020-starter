@@ -1,0 +1,1 @@
+### This is my new starter for WordPress theme development in 2020

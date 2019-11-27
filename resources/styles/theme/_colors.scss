@@ -1,0 +1,19 @@
+$color-primary: #f57c00;
+$color-primary-light: #ffad42;
+$color-primary-dark: #bb4d00;
+$primary: $color-primary;
+
+$color-secondary: #0f0f0f;
+$color-secondary-light: #353535;
+$color-secondary-dark: #000;
+
+$color-text: #000;
+$color-text-secondary: #fff;
+
+$secondary: $color-secondary;
+
+$color-success: #64dd17;
+$color-success-dark: darken($color-success, 10%);
+
+$color-error: #d50000;
+$color-error-dark: darken($color-error, 10%);

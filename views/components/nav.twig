@@ -1,0 +1,11 @@
+<nav id="navigation" class="nav nav--menu">
+  <ul class="nav__menu nav__menu--desktop js-scrollbar" data-name="menu">
+    {% for key,item in menus.main.items %}
+      <li class="nav__item">
+        <a href="{{ item.link }}" class="nav__link" {{ item.target ? 'target="' ~ item.target ~ '"' : '' }}>
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

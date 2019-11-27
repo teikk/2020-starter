@@ -1,0 +1,6 @@
+<header class="heading {{ mods ? 'heading--' ~ mods|join(' heading--') : '' }}">
+  <a href="#{{ fn('sanitize_title', title) }}" class=""></a>
+  <h{{level ?: 2}}>
+    {{ title|striptags('<br><br/><a><strong><em>') }}
+  </h{{level ?: 2}}>
+</header>

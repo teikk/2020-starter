@@ -1,0 +1,24 @@
+{
+    "name": "teik/fitness-app",
+    "type": "wp-theme",
+    "authors": [
+        {
+            "name": "teikk7",
+            "email": "k.lyzwa7@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Teik\\": "src/"
+        },
+        "files": [
+            "includes/helpers.php",
+            "includes/middlewares.php",
+            "includes/controllers.php",
+            "includes/blocks.php"            
+        ]
+    },
+    "require": {
+        "timber/timber": "^1.12"
+    }
+}

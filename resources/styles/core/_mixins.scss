@@ -1,0 +1,65 @@
+@function min-breakpoint($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint ) {
+    @return map-get($grid-breakpoints, $breakpoint);
+  }
+  @return $breakpoint;
+}
+
+@function max-breakpoint($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint ) {
+    @return map-get($grid-breakpoints, $breakpoint) - 1px;
+  } @else {
+    @return $breakpoint;
+  }
+}
+
+@mixin min-width($breakpoint) {
+  @media (min-width: min-breakpoint($breakpoint)){
+    @content;
+  }
+}
+
+@mixin max-width($breakpoint) {
+  @media (max-width:max-breakpoint($breakpoint)){
+    @content;
+  }
+}
+
+@mixin colorSVG($color: $color-primary) {
+  svg {
+    * {
+      fill: $color;
+    }
+  }
+}
+
+@mixin resetFocus() {
+  &:focus {
+    outline: initial;
+    border: none;
+  }
+}
+
+@mixin shadow($width: 10px, $color: #000, $opacity: 0.2, $position: 0 5px, $spread: 0) {
+  box-shadow: $position $width $spread transparentize($color, 1 - $opacity);
+}
+
+@mixin resetButton() {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+@mixin absolute-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+@mixin highContrast() {
+  body[data-contrast="high"] & {
+    @content;
+  }
+}
